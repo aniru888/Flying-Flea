@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield's EV Strategy: An Infographic Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Default height for mobile */
+            max-height: 400px; /* Max height for larger screens */
+            max-width: 600px; /* Max width for charts */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .chart-container {
+                height: 350px; /* Taller charts on tablets and desktops */
+            }
+        }
+        .kpi-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .investment-flow-arrow {
+            font-size: 2rem; 
+            color: #3B82F6; 
+            margin: 0 0.5rem; 
+        }
+        .investment-step {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            text-align: center;
+            flex: 1; 
+            min-width: 150px; 
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 767px) { 
+            #investment-flow .flex-col.md\\:flex-row > .flex.md\\:flex-col {
+                margin-bottom: 1rem; 
+                width: 100%; 
+            }
+             #investment-flow .flex-col.md\\:flex-row > .flex.md\\:flex-col:not(:last-child) .text-3xl.font-bold {
+                transform: rotate(90deg);
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+             #investment-flow .flex-col.md\\:flex-row > .flex.md\\:flex-col .flex-grow.h-px {
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-gray-900 text-white p-6 md:p-8 text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2">Royal Enfield's Electric Crossroads</h1>
+        <p class="text-md sm:text-lg md:text-xl text-gray-300">A Critical Evaluation of the Flying Flea Strategy and its Long-Term Viability</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Market Dynamics Section -->
+        <section id="market-dynamics" class="mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-2 text-gray-900">The Electric Imperative: A Market in Motion</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-6 md:mb-8 text-sm sm:text-base">The shift to electric mobility is no longer a future trend; it's a present-day reality reshaping the global two-wheeler landscape. For a legacy brand like Royal Enfield, adapting is not just an opportunity—it's essential for survival and continued growth in a market experiencing explosive expansion.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card">
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Global Electric Two-Wheeler Market Growth (USD Billion)</h3>
+                     <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 text-center">Driven by regulatory pushes and consumer demand, the global market is on a steep upward trajectory, demonstrating significant growth potential for new entrants.</p>
+                    <div class="chart-container">
+                        <canvas id="globalMarketChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card">
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Indian Electric Motorcycle Market Projection (USD Billion)</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 text-center">While scooters currently dominate India's EV space, the nascent electric motorcycle segment is forecast to grow nearly 4x by 2035, representing a key battleground.</p>
+                    <div class="chart-container">
+                        <canvas id="indianMarketChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Removed Gemini API Button -->
+        </section>
+        
+        <!-- Competitive Landscape Section -->
+        <section id="competitive-landscape" class="mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-2 text-gray-900">The Competitive Arena: Incumbents vs. Innovators</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-6 md:mb-8 text-sm sm:text-base">Royal Enfield enters a fiercely contested market. It must navigate between agile, tech-focused startups and powerful legacy OEMs who are aggressively transitioning, each with distinct advantages and weaknesses.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card lg:col-span-2">
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Indian E2W Market Share Snapshot (May 2025)</h3>
+                     <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 text-center">Legacy players like TVS and Bajaj have rapidly gained significant market share, demonstrating their ability to leverage distribution and brand trust to compete effectively with EV-native brands like Ola and Ather.</p>
+                    <div class="chart-container h-[300px] md:h-[350px] lg:h-[400px]">
+                        <canvas id="marketShareChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card">
+                     <h3 class="text-lg sm:text-xl font-bold mb-2 text-center">Brand Strength & Quality</h3>
+                     <p class="text-xs sm:text-sm text-gray-600 mb-4 text-center">Royal Enfield's brand is its fortress, a key differentiator in a crowded market.</p>
+                     <div class="text-center my-4 sm:my-6">
+                         <div class="text-5xl sm:text-6xl font-black text-blue-600">#4</div>
+                         <div class="text-md sm:text-lg font-semibold mt-1 sm:mt-2">Global Strongest Auto Brand (2023)</div>
+                         <p class="text-xs text-gray-500">(Source: Brand Finance)</p>
+                     </div>
+                     <div class="text-center my-4 sm:my-6">
+                         <div class="text-5xl sm:text-6xl font-black text-teal-500">#1</div>
+                         <div class="text-md sm:text-lg font-semibold mt-1 sm:mt-2">in Initial Quality (2WIQS)</div>
+                          <p class="text-xs text-gray-500">(Source: J.D. Power 2025)</p>
+                     </div>
+                     <p class="text-xs sm:text-sm text-gray-600 mt-4 text-center">This combination of powerful brand equity and recognized quality provides a strong foundation for the EV venture, but it also sets high customer expectations.</p>
+                </div>
+            </div>
+             <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 mt-6 md:mt-8 kpi-card">
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Competitive EV Motorcycle Benchmarking</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 text-center">The Flying Flea C6 enters a diverse field. It aims to carve a niche based on design, brand, and a balanced "urban-plus" experience, rather than competing solely on raw performance or lowest price.</p>
+                    <div class="overflow-x-auto">
+                        <table id="competitorTable" class="w-full text-xs sm:text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-4 py-2 sm:px-6 sm:py-3">Model</th>
+                                    <th scope="col" class="px-4 py-2 sm:px-6 sm:py-3">Est. Price (Lakhs)</th>
+                                    <th scope="col" class="px-4 py-2 sm:px-6 sm:py-3">Claimed Range (km)</th>
+                                    <th scope="col" class="px-4 py-2 sm:px-6 sm:py-3">Top Speed (km/h)</th>
+                                    <th scope="col" class="px-4 py-2 sm:px-6 sm:py-3">Target Segment</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-blue-50 border-b">
+                                    <th scope="row" class="px-4 py-3 sm:px-6 sm:py-4 font-bold text-blue-800 whitespace-nowrap">RE Flying Flea C6</th>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">₹2.0 - 3.0</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">100 - 200</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">~90-110</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">Urban-Plus, Lifestyle</td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <th scope="row" class="px-4 py-3 sm:px-6 sm:py-4 font-medium text-gray-900 whitespace-nowrap">Ultraviolette F77</th>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">₹3.99</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">323</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">155</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">Performance</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b">
+                                    <th scope="row" class="px-4 py-3 sm:px-6 sm:py-4 font-medium text-gray-900 whitespace-nowrap">Tork Kratos R</th>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">₹1.68</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">180</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">105</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">Urban Commuter</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <th scope="row" class="px-4 py-3 sm:px-6 sm:py-4 font-medium text-gray-900 whitespace-nowrap">Revolt RV400</th>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">₹1.39</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">150</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">85</td>
+                                    <td class="px-4 py-3 sm:px-6 sm:py-4">Budget Commuter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     <!-- Removed Gemini API Button -->
+                </div>
+        </section>
+
+        <!-- Risk Assessment Section -->
+        <section id="risk-assessment" class="mb-12">
+             <h2 class="text-2xl sm:text-3xl font-bold text-center mb-2 text-gray-900">Strategic Viability & Risk Assessment</h2>
+             <p class="max-w-3xl mx-auto text-center text-gray-600 mb-6 md:mb-8 text-sm sm:text-base">The Flying Flea strategy is a "Cautiously Optimistic" gambit. While the market opportunity is high, significant challenges in strategic fit and execution capability create substantial risk exposure that must be meticulously managed.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                 <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card">
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Strategic Viability Scorecard</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 text-center">A qualitative assessment highlights the balance of potential against the hurdles Royal Enfield must overcome. Execution capability is the lynchpin for success.</p>
+                    <div class="chart-container">
+                        <canvas id="viabilityRadarChart"></canvas>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card">
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Key Risk Areas</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 text-center">Four critical areas pose the greatest threat to the EV initiative's success. Mitigation requires proactive and agile management across the organization.</p>
+                    <div class="space-y-3 sm:space-y-4 mt-4 sm:mt-6">
+                        <div class="flex items-start p-3 sm:p-4 bg-red-50 rounded-lg">
+                            <div class="text-xl sm:text-2xl mr-3 sm:mr-4">⚠️</div>
+                            <div class="flex-grow">
+                                <h4 class="font-semibold text-sm sm:text-base risk-title">Brand Dissonance & Dilution</h4>
+                                <p class="text-xs sm:text-sm text-gray-600 risk-description">The silent EV may conflict with the "thump" identity, risking alienation of loyalists and confusing new buyers.</p>
+                                <!-- Removed Gemini API Button -->
+                            </div>
+                        </div>
+                        <div class="flex items-start p-3 sm:p-4 bg-yellow-50 rounded-lg">
+                            <div class="text-xl sm:text-2xl mr-3 sm:mr-4">🎯</div>
+                             <div class="flex-grow">
+                                <h4 class="font-semibold text-sm sm:text-base risk-title">Market Acceptance & Niche Appeal</h4>
+                                <p class="text-xs sm:text-sm text-gray-600 risk-description">The "anti-scooter" electric motorcycle segment is unproven and could be smaller or more price-sensitive than anticipated.</p>
+                                <!-- Removed Gemini API Button -->
+                            </div>
+                        </div>
+                        <div class="flex items-start p-3 sm:p-4 bg-blue-50 rounded-lg">
+                             <div class="text-xl sm:text-2xl mr-3 sm:mr-4">⚡</div>
+                             <div class="flex-grow">
+                                <h4 class="font-semibold text-sm sm:text-base risk-title">Competitive Squeeze</h4>
+                                <p class="text-xs sm:text-sm text-gray-600 risk-description">Intense competition from agile startups and legacy OEMs on price, technology, and features.</p>
+                                <!-- Removed Gemini API Button -->
+                            </div>
+                        </div>
+                         <div class="flex items-start p-3 sm:p-4 bg-green-50 rounded-lg">
+                            <div class="text-xl sm:text-2xl mr-3 sm:mr-4">⚙️</div>
+                            <div class="flex-grow">
+                                <h4 class="font-semibold text-sm sm:text-base risk-title">Execution Challenges</h4>
+                                <p class="text-xs sm:text-sm text-gray-600 risk-description">Hurdles in manufacturing, battery supply chain resilience, and preparing the dealer network for EVs.</p>
+                                <!-- Removed Gemini API Button -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Flow Section -->
+        <section id="investment-flow" class="mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-2 text-gray-900">The Path to Production: Investment & Execution</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-6 md:mb-8 text-sm sm:text-base">Royal Enfield is making significant capital commitments, following a structured path from R&D and strategic partnerships to a phased manufacturing rollout, culminating in a go-to-market strategy that must transform its vast dealer network.</p>
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8 kpi-card">
+                <div class="flex flex-col md:flex-row justify-between items-center text-center space-y-6 md:space-y-0 md:space-x-2">
+                    <div class="investment-step">
+                         <div class="text-3xl sm:text-4xl font-black text-blue-600">₹1,500+</div>
+                         <div class="font-semibold text-sm sm:text-base mt-1">Crore Investment</div>
+                         <p class="text-xs text-gray-500 mt-1 max-w-xs">Committed to the EV business, including R&D, partnerships, and manufacturing setup.</p>
+                    </div>
+                    <div class="investment-flow-arrow hidden md:block">→</div>
+                     <div class="w-full h-px bg-gray-300 md:hidden my-3"></div>
+                     <div class="investment-step">
+                        <div class="text-3xl sm:text-4xl font-black text-teal-500">200+</div>
+                         <div class="font-semibold text-sm sm:text-base mt-1">Engineers</div>
+                         <p class="text-xs text-gray-500 mt-1 max-w-xs">Dedicated EV team in UK & India, bolstered by the Stark Future partnership for tech acceleration.</p>
+                     </div>
+                    <div class="investment-flow-arrow hidden md:block">→</div>
+                    <div class="w-full h-px bg-gray-300 md:hidden my-3"></div>
+                    <div class="investment-step">
+                         <div class="text-3xl sm:text-4xl font-black text-yellow-600">2</div>
+                         <div class="font-semibold text-sm sm:text-base mt-1">Phase Manufacturing</div>
+                         <p class="text-xs text-gray-500 mt-1 max-w-xs">Starts at existing Oragadam plant, scaling up to the new dedicated Cheyyar factory.</p>
+                    </div>
+                    <div class="investment-flow-arrow hidden md:block">→</div>
+                    <div class="w-full h-px bg-gray-300 md:hidden my-3"></div>
+                    <div class="investment-step">
+                       <div class="text-3xl sm:text-4xl font-black text-red-500">Q4</div>
+                       <div class="font-semibold text-sm sm:text-base mt-1">FY2026 Launch</div>
+                       <p class="text-xs text-gray-500 mt-1 max-w-xs">Flying Flea C6 launch, requiring transformed dealer network for EV sales & service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-2 text-gray-900">Critical Success Factors & Recommendations</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-6 md:mb-8 text-sm sm:text-base">Success is not guaranteed by heritage alone. It demands flawless execution across five non-negotiable fronts. The following recommendations provide an actionable roadmap for navigating the challenges ahead.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card flex flex-col">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3">🏷️</div>
+                    <h4 class="font-bold text-md sm:text-lg mb-1 sm:mb-2">Strategic Brand Management</h4>
+                    <p class="text-gray-600 text-xs sm:text-sm flex-grow">Masterfully navigate the sub-brand strategy. Ensure Flying Flea enhances, not dilutes, the master brand through clear positioning and an authentic EV experience.</p>
+                    <button class="mt-3 sm:mt-4 text-left text-xs sm:text-sm text-blue-600 font-semibold hover:underline">Action: A/B test brand messages by Q3 2025.</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card flex flex-col">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3">✅</div>
+                    <h4 class="font-bold text-md sm:text-lg mb-1 sm:mb-2">Product-Market Fit</h4>
+                    <p class="text-gray-600 text-xs sm:text-sm flex-grow">Deliver a product that genuinely meets the needs of the "urban-plus" segment at a price they see as valuable, especially on range and reliability.</p>
+                     <button class="mt-3 sm:mt-4 text-left text-xs sm:text-sm text-blue-600 font-semibold hover:underline">Action: Conduct consumer clinics & be agile.</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card flex flex-col">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3">🚀</div>
+                    <h4 class="font-bold text-md sm:text-lg mb-1 sm:mb-2">Technological Competitiveness</h4>
+                    <p class="text-gray-600 text-xs sm:text-sm flex-grow">Leverage the Stark Future partnership and foster R&D agility to keep pace with rapid EV tech advancements in battery, charging, and software.</p>
+                    <button class="mt-3 sm:mt-4 text-left text-xs sm:text-sm text-blue-600 font-semibold hover:underline">Action: Establish 'Tech Watch' team by Q4 2025.</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card flex flex-col">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3">🔧</div>
+                    <h4 class="font-bold text-md sm:text-lg mb-1 sm:mb-2">Dealer & Service Excellence</h4>
+                    <p class="text-gray-600 text-xs sm:text-sm flex-grow">Successfully transform the dealer network to sell and service EVs, ensuring a positive customer experience that reinforces brand trust.</p>
+                     <button class="mt-3 sm:mt-4 text-left text-xs sm:text-sm text-blue-600 font-semibold hover:underline">Action: Pilot 'EV Experience Zones' in top 10 dealers by Q1 2026.</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card flex flex-col">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3">🔋</div>
+                    <h4 class="font-bold text-md sm:text-lg mb-1 sm:mb-2">Battery Sourcing & Cost Control</h4>
+                    <p class="text-gray-600 text-xs sm:text-sm flex-grow">Develop a robust, diversified, and cost-effective battery supply strategy to manage the single largest cost driver and ensure price competitiveness.</p>
+                     <button class="mt-3 sm:mt-4 text-left text-xs sm:text-sm text-blue-600 font-semibold hover:underline">Action: Develop 'Plan B' for battery sourcing by end-2025.</button>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 kpi-card flex flex-col bg-gray-800 text-white">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3">📈</div>
+                    <h4 class="font-bold text-md sm:text-lg mb-1 sm:mb-2">Future Growth</h4>
+                    <p class="text-gray-300 text-xs sm:text-sm flex-grow">Plan beyond the Flying Flea. The long-term vision must include a scalable platform strategy for a broader portfolio, including larger, long-distance EVs.</p>
+                     <button class="mt-3 sm:mt-4 text-left text-xs sm:text-sm text-teal-400 font-semibold hover:underline">Action: Initiate feasibility study for large EV by mid-2026.</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Gemini API Response - REMOVED -->
+
+    <footer class="bg-gray-900 text-white p-4 sm:p-6 text-center text-xs sm:text-sm">
+        <p>This infographic is a visual summary based on the whitepaper "Royal Enfield's Electric Crossroads: A Critical Evaluation of the Flying Flea Strategy and its Long-Term Viability."</p>
+        <p class="text-gray-400 mt-1 sm:mt-2">Data is compiled from various public sources and industry reports cited within the research. Projections and assessments are illustrative. Not for investment advice.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Chart.js setup (existing code)
+            const wrapLabel = (label, maxWidth = 15) => { 
+                if (typeof label !== 'string' || label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = currentLine ? currentLine + ' ' + word : word;
+                    }
+                }
+                if (currentLine.trim().length > 0) {
+                    lines.push(currentLine.trim());
+                }
+                return lines.length > 0 ? lines : [label]; 
+            };
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                if (!item) return '';
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                  return label.join(' ');
+                }
+                return label; 
+            };
+            
+            const chartOptionsBase = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                           color: '#4A5568', 
+                           font: { size: 11 },
+                            boxWidth: 15,
+                            padding: 10
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        titleFont: { size: 14 },
+                        bodyFont: { size: 12 },
+                        callbacks: { title: tooltipTitleCallback }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: '#4A5568', font: { size: 10 } },
+                        grid: { color: '#E2E8F0', drawBorder: false }
+                    },
+                    x: {
+                        ticks: { 
+                            color: '#4A5568', 
+                            font: { size: 10 },
+                            callback: function(value) {
+                                const label = this.getLabelForValue(value);
+                                return Array.isArray(label) ? label[0] + (label.length > 1 ? '...' : '') : label;
+                            }
+                        },
+                        grid: { display: false }
+                    }
+                }
+            };
+            
+            const brilliantBluesPalette = {
+                blue: '#007BFF', teal: '#00C49F', yellow: '#FFBB28', red: '#FF8042', purple: '#A354F1', gray: '#6c757d',
+                lightBlue: 'rgba(0, 123, 255, 0.2)', lightTeal: 'rgba(0, 196, 159, 0.2)'
+            };
+
+            const globalMarketCtx = document.getElementById('globalMarketChart');
+            if (globalMarketCtx) {
+                new Chart(globalMarketCtx, { type: 'line', data: { labels: ['2024', '2025', '2030'], datasets: [{ label: 'Global E2W Market (USD Bn)', data: [228.20, 246.3, 375.82], borderColor: brilliantBluesPalette.blue, backgroundColor: brilliantBluesPalette.lightBlue, fill: true, tension: 0.4, pointRadius: 3, pointBackgroundColor: brilliantBluesPalette.blue }] }, options: JSON.parse(JSON.stringify(chartOptionsBase)) });
+            }
+
+            const indianMarketCtx = document.getElementById('indianMarketChart');
+            if (indianMarketCtx) {
+                new Chart(indianMarketCtx, { type: 'line', data: { labels: ['2023', '2025', '2030', '2035'], datasets: [{ label: 'Indian E-Motorcycle Market (USD Bn)', data: [1.05, 1.34, 2.5, 4.1], borderColor: brilliantBluesPalette.teal, backgroundColor: brilliantBluesPalette.lightTeal, fill: true, tension: 0.4, pointRadius: 3, pointBackgroundColor: brilliantBluesPalette.teal }] }, options: JSON.parse(JSON.stringify(chartOptionsBase)) });
+            }
+
+            const marketShareCtx = document.getElementById('marketShareChart');
+            if (marketShareCtx) {
+                const marketShareOptions = JSON.parse(JSON.stringify(chartOptionsBase)); 
+                marketShareOptions.plugins.legend.position = 'right'; 
+                marketShareOptions.plugins.legend.labels.boxWidth = 15;
+                marketShareOptions.plugins.legend.labels.padding = 12;
+                delete marketShareOptions.scales; 
+                new Chart(marketShareCtx, { type: 'doughnut', data: { labels: ['TVS Motor (iQube)', 'Bajaj Auto (Chetak)', 'Ola Electric', 'Ather Energy', 'Hero MotoCorp (Vida)', 'Others'], datasets: [{ label: 'Market Share %', data: [24, 25, 15, 10, 6.1, 19.9], backgroundColor: [ brilliantBluesPalette.blue, brilliantBluesPalette.teal, brilliantBluesPalette.yellow, brilliantBluesPalette.red, brilliantBluesPalette.purple, brilliantBluesPalette.gray ], hoverOffset: 8, borderWidth: 2, hoverBorderColor: '#fff' }] }, options: marketShareOptions });
+            }
+            
+            const viabilityRadarCtx = document.getElementById('viabilityRadarChart');
+            if (viabilityRadarCtx) {
+                const radarOptions = JSON.parse(JSON.stringify(chartOptionsBase));
+                radarOptions.plugins.legend.display = false; 
+                radarOptions.scales = { r: { angleLines: { color: '#CBD5E1' }, grid: { color: '#E2E8F0' }, pointLabels: { font: { size: 9.5, weight: '500' }, color: '#4A5568', padding: 5 }, ticks: { backdropColor: 'transparent', color: '#718096', stepSize: 1, font: { size: 9 } }, min: 0, max: 5 } };
+                delete radarOptions.scales.x; delete radarOptions.scales.y;
+                new Chart(viabilityRadarCtx, { type: 'radar', data: { labels: [ wrapLabel('Market Opportunity'), wrapLabel('Strategic Fit'), wrapLabel('Execution Capability'), wrapLabel('Financial Soundness'), wrapLabel('Risk Exposure (Inverse)') ], datasets: [{ label: 'Strategic Viability Assessment', data: [5, 3, 3, 3, 2], fill: true, backgroundColor: brilliantBluesPalette.lightBlue, borderColor: brilliantBluesPalette.blue, pointBackgroundColor: brilliantBluesPalette.blue, pointBorderColor: '#fff', pointHoverBackgroundColor: '#fff', pointHoverBorderColor: brilliantBluesPalette.blue, pointRadius: 4, pointHoverRadius: 6 }] }, options: radarOptions });
+            }
+
+            // Gemini API Integration - REMOVED
+            // All JavaScript related to modal, API calls, and buttons for API calls has been removed.
+
+        });
+    </script>
+</body>
+</html>
